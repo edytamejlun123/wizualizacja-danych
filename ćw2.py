@@ -102,8 +102,8 @@
 #
 #Jak dodać nowy element do slownika??????
 
-lista = ['a', 5, 5.5, [1,2,3]]
-słownik={'klucz':'wartość',1:30}
-#a=lista[nr_indeksu]
-print(słownik)
-print(słownik[1])
+# lista = ['a', 5, 5.5, [1,2,3]]
+# słownik={'klucz':'wartość',1:30}
+# #a=lista[nr_indeksu]
+# print(słownik)
+# print(słownik[1])
