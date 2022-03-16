@@ -55,3 +55,5 @@ i =7
 t=3
 i%=t
 print(i)
+
+#Zad. 4
