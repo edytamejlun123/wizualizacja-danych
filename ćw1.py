@@ -57,3 +57,7 @@ i%=t
 print(i)
 
 #Zad. 4
+a = math.exp(10)
+print(a)
+
+#Zad. 5
