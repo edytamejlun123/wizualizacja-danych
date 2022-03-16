@@ -60,4 +60,13 @@ print(i)
 a = math.exp(10)
 print(a)
 
+b = (math.log(5+(math.sin(8))**2))**(1/6)
+print(b)
+
+c = math.fabs(3.55)
+print(c)
+
+c = math.fabs(4.80)
+print(c)
+
 #Zad. 5
