@@ -13,3 +13,57 @@ print(sport1)
 skróty = {'al.':'aleja', 'cd.':'ciąg dalszy', 'CV.':'curriculum vitae', 'dr.':'Doktor'}
 print(skróty)
 
+#Zad. 3
+grykomp = {'cyber':'Cyberpunk 2077', 'simsy':'The Sims 4', 'FIFa':"Fifa22" }
+print(grykomp.keys())
+ilosc=0
+for a in grykomp:
+    if grykomp.keys():
+        ilosc=ilosc+1
+print(ilosc)
+
+#Zad. 4
+print('Twoje zdanie: ')
+zdanie = input()
+print(zdanie)
+ilosc=0
+for i in zdanie:
+    if i == 'a' :
+        ilosc=ilosc+1
+print(ilosc)
+
+#Zad. 5 
+
+#Zad. 6
+lista = []
+print('podaj 3 liczby')
+a = input()
+print(a)
+lista.append(a)
+b = input()
+print(b)
+lista.append(b)
+c = input()
+print(c)
+lista.append(c)
+print(lista)
+for i in lista:
+
+#Zad. 7
+lista = [1, 4.5, 5, 6.7, 3, 1.2]
+for i in lista:
+    i=i**2
+    print(i)
+
+#Zad. 8
+lista = []
+liczba = 0
+while liczba!=11:
+    if liczba%2==0:
+        lista.append(liczba)
+    print(liczba)
+    liczba += 1
+else:
+    print(lista)
+    
+#Zad. 9
