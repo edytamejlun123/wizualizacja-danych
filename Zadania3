@@ -1,1 +1,17 @@
+#Zad. 1
+a = [1-x for x in range(1,11,1)]
+b = [4**i for i in range(8)]
+c = [x for x in b if x%2==0]
+print(a)
+print(b)
+print(c)
+
+#Zad.2
+import random
+lista = []
+for i in range(1, 11, 1):
+        lista.append(random.randint(1, 90))
+print(lista)
+newlist = [x for x in lista if x%2==0]
+print(newlist)
 
