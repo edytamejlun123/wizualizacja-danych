@@ -66,14 +66,12 @@ while liczba!=11:
 else:
     print(lista)
     
-# #Zad. 9
-# import math
-# print("podaj liczbe: ")
-# a = input()
-# print(a)
-# if a :
-#     pierwiastek = sqrt(a)
-#     print(pierwiastek)
-# else:
-#     print('błąd - liczba ujemna')
+#Zad. 9
+import math
+a = input("podaj liczbę: ")
+if int(a) < 0 :
+    print('błąd - liczba ujemna')
+else:
+    pierwiastek = math.sqrt(int(a))
+    print(pierwiastek)
 
