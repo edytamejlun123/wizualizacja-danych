@@ -15,3 +15,39 @@ print(lista)
 newlist = [x for x in lista if x%2==0]
 print(newlist)
 
+#Zad. 4
+import math
+print('podaj 3 boki: ')
+a = input()
+b = input()
+c = input()
+if a>b:
+    if a > c:
+        if int(c)**2 + int(b)**2 == int(a)**2:
+            print('trojkat prostakatny')
+    else:
+        if int(a)**2 + int(b)**2 == int(c)**2:
+            print('trojkat prostakatny')
+elif a < b:
+    if b > c:
+        if int(c)**2 + int(a)**2 == int(b)**2:
+            print('trojkat prostakatny')
+    else:
+        if int(a) ** 2 + int(b) ** 2 == int(c) ** 2:
+            print('trojkat prostakatny')
+else:
+    if a==b:
+        if int(a)**2 + int(b)**2 == int(c)**2:
+            print('trojkat prostakatny')
+    elif b==c:
+        if int(c)**2 + int(b)**2 == int(a)**2:
+            print('trojkat prostakatny')
+    else:
+        if int(c)**2 + int(a)**2 == int(b)**2:
+            print('trojkat prostakatny')
+
+#Zad. 5
+def poleTrapezu(a=9, b=4, h=12):
+    pole = ((a+b)*h)/2
+    print(pole)
+print(poleTrapezu())
