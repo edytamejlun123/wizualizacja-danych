@@ -1,83 +1,82 @@
 import numpy as np
 import pandas as pd
+import matplotlib.pyplot as plt
 
-s = pd.Series([1, 3, 5.5, np.nan])
-# print(s)
-s1 = pd.Series([10, 12, 8, 14], index= ['a', 'b', 'c', 'd'])
-# print(s1)
+ts = pd.Series(np.random.randn(1000))
+ts = ts.cumsum()
 
-dane = {'kraj': ['Belgia', 'Indie', 'Brazylia'],
-        'Stolica': ['Bruksela', 'New Delhi', 'Brasilia'],
-        'Populacja': [11190846, 13031771035, 207847528]}
+# ts.plot()
+# plt.show()
 
-df = pd.DataFrame(dane)
+# dane = {'Kraj': ['Belgia', 'Indie', 'Brazylia', 'Polska'],
+#         'Stolica': ['Bruksela', 'New Delhi', 'Brasilia', 'Warszawa'],
+#         'Populacja': [11190846, 1303171035, 207847528, 38675467],
+#         'Kontynent': ['Europa', 'Azja', 'Ameryka Południowa', 'Europa']}
+#
+# df = pd.DataFrame(dane)
+#
+# grupa = df.groupby('Kontynent').agg({'Populacja': ['sum']})
+# print(grupa)
+# # grupa.plot(kind='bar', xlabel='Kontynent', ylabel='Populacja w mld',
+# #            rot=0, title='Populacja dla kontynentów')
+# wykres = grupa.plot.bar()
+# wykres.set_xlabel('Kontynent')
+# wykres.set_ylabel('Populacja w mld')
+# wykres.tick_params(axis='x', labelrotation=0)
+# wykres.legend()
+# wykres.set_title('Populacja na kotynentach')
+# plt.savefig('wykres.png')
+# plt.show()
+
+# df = pd.read_csv('dane.csv', header=0, sep=';', decimal='.')
 # print(df)
+#
+# grupa = df.groupby('Imię i nazwisko').agg(
+#     {'Wartość zamówienia': ['sum']})
+#
+# grupa.plot(kind='pie', subplots=True, autopct='%.2f %%',
+#            fontsize=20, figsize=(8,8), colors=['red', 'green'])
+# plt.legend(loc='upper left')
+# plt.show()
 
-# daty = pd.date_range('20220420', periods=5)
-# df = pd.DataFrame(np.random.randn(5, 4), index= daty, columns=list('ABCD'))
+# df = pd.DataFrame(ts)
 # print(df)
+#
+# df['Średnia krocząca'] = df.rolling(window=100).mean()
+# df.plot()
+# plt.legend(['Wartości', 'Średnia z n-elementów'])
+# plt.show()
 
-iris_df = pd.read_csv('iris.csv', header=0, sep=',', decimal='.')
-# print(iris_df)
-# iris_df.to_csv('nowy.csv', index=False)
-
-# xlsx = pd.ExcelFile('wyniki.xlsx')
-# df = pd.read_excel(xlsx, header=0)
+# #Zad. 1
+# dzieci = {'Rok': [2001, 2002, 2003, 2004, 2005, 2006],
+#         'Ilość': [1234, 2332, 2234, 1221, 2223, 3432]}
+# df = pd.DataFrame(dzieci)
+#
+# grupa = df.groupby('Rok').agg({'Ilość': ['sum']})
+# print(grupa)
+# grupa.plot(kind='bar', xlabel='Rok', ylabel='Ilość',
+#            rot=0, title='Liczba Urodzonych Dzieci')
+# plt.show()
+#ZAD.1
+# df = pd.read_excel('imiona.xlsx')
+# df.head()
+#
 # print(df)
-# df.to_excel('nowy.xlsx', sheet_name='Arkusz_1', index=False)
-
-# print(s1['a'])
-# print(s1.a)
-
-# print(df['Populacja'])
-# print(df.Populacja)
 #
-# print(df.iloc[[0], [1]])
-# print(df.loc[[0], ['kraj']])
-# print(df.at[0, 'kraj'])
+# grupa = df.groupby('Rok').agg({'Liczba': ['sum']})
+# print(grupa)
+# grupa.plot(kind='line', xlabel='Rok', ylabel='Ilość')
+# plt.show()
 
-# print(df.sample(1))
-# print(df.sample(frac=0.5))
+# #ZAD.2
+# df = pd.read_excel('imiona.xlsx')
 #
-# print(' ')
-# print(df.sample(10, replace=True))
-
-# print(iris_df.head(5))
-# print(iris_df.tail(10))
-
-# print(s1[s1 > 10])
-# print(s1.where(s1 > 10, 'element nie spełnia warunku'))
-
-# seria = s1.copy()
-# print(seria)
-# seria.where(s1 > 10, 'element nie spełnia warunku', inplace=True)
-# print(seria)
-
-# print(s1[~(s1 > 10)])
-# print(s1[(s1 < 13) & (s1 > 8)])
-#
-# print(df[df['Populacja'] > 1200000000])
-# print(df[(df.Populacja > 1000000) & (df.index.isin([0, 2]))])
-#
-# szukaj = ['Belgia', 'Brasilia']
-# print(df.isin(szukaj))
-#
-
-s1['e'] = 15
-print(s1)
-
-df.loc[3] = 'nowy_element'
-df.loc[4] = ['Polska', 'Warszawa', 38675467]
-print(df, '\n_________')
-
-df.drop(3, inplace=True)
-print(df, '\n.........')
-# df.drop('kraj', axis=1, inplace=True)
 # print(df)
-df['Kontynent'] = ['Europa', 'Azja', 'Ameryka Południowa', 'Europa']
-print(df, '\n,,,,,,,')
-print(df.sort_values(by='kraj'), '\n__________')
-grupa = df.groupby(by='Kontynent')
-print(grupa.get_group('Europa'))
+# grupa = df.groupby('Plec').agg({'Liczba': ['sum']})
+# print(grupa)
+# grupa.plot(kind='bar', xlabel = 'Plec', ylabel = 'ilosc')
+# plt.show()
 
-print(df.groupby(by='Kontynent').agg({'Populacja': ['sum']}))
+#ZAD.3
+
+#zad.4
