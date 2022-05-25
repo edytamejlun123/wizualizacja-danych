@@ -1,1 +1,6 @@
 
+Zad 1.
+a = np.arange(0,80,4)
+print(a)
+
+Zad.2 
