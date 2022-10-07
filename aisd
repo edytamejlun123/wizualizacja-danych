@@ -1,0 +1,44 @@
+print('Hello World :(')
+
+# Zad 1
+# def imie_naz(i, nazwisko):
+#     return i+'.'+nazwisko
+# i = "E"
+# n = "Mejlun"
+# print(imie_naz(i,n))
+
+# # Zad2
+# def osoba(imie, nazwisko):
+#     return imie[0].upper()+'.'+nazwisko.title()
+# i = "edyta"
+# n = "mejlun"
+# print(osoba(i,n))
+
+# # Zad3
+#
+# def rok(a, b, wiek):
+#     c = a*100 + b
+#     return c-wiek
+# a = 20
+# b = 22
+# w = 27
+# print(rok(a, b, w))
+
+# # Zad 4
+# def foo(i, n, osoba):
+#     return osoba(i,n)
+# print(foo(i,n,osoba))
+
+# # zad5
+# def dzielenie(a, b):
+#     if(a>0 and b>0 and b!=0):
+#         return a/b
+# print(dzielenie(6,2))
+# print(dzielenie(8,2))
+
+# zad6
+# a = 0
+# while(a!=100 or a>100):
+#     b = input()
+#     a += b
+b = (input()
